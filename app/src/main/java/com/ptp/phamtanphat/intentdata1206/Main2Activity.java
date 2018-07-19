@@ -22,8 +22,12 @@ public class Main2Activity extends AppCompatActivity {
         //Nhan chuoi
 //        String ketqua = (intent != null) ? intent.getStringExtra(MainActivity.chuoi) : "Intent khong tai";
 //        Toast.makeText(this, ketqua , Toast.LENGTH_SHORT).show();
-       //Nhan so
-        int ketqua = (intent != null) ? intent.getIntExtra(MainActivity.so,-1) : 0;
-        Toast.makeText(this, ketqua + "" , Toast.LENGTH_SHORT).show();
+        //Nhan so
+//        int ketqua = (intent != null) ? intent.getIntExtra(MainActivity.so,-1) : 0;
+//        Toast.makeText(this, ketqua + "" , Toast.LENGTH_SHORT).show();
+        //Nhan object
+//        Nhanvien nhanvien = (intent != null) ? (Nhanvien) intent.getSerializableExtra(MainActivity.object) : null;
+        Nhanvien nhanvien = (Nhanvien) intent.getSerializableExtra(MainActivity.object);
+        Toast.makeText(this, nhanvien.getTen(), Toast.LENGTH_SHORT).show();
     }
 }
