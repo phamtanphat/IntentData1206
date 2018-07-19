@@ -19,14 +19,11 @@ public class Main2Activity extends AppCompatActivity {
 //        }else {
 //            Toast.makeText(this, "Khong co gia tri intent", Toast.LENGTH_SHORT).show();
 //        }
-        String ketqua = (intent != null) ? CheckKeyIntent("chuoi",intent) : "Intent khong tai";
-        Toast.makeText(this, ketqua , Toast.LENGTH_SHORT).show();
-    }
-    public String CheckKeyIntent(String key , Intent intent){
-        String giatri = "";
-        if (intent.hasExtra(key)){
-            giatri = intent.getStringExtra(key);
-        }
-        return giatri;
+        //Nhan chuoi
+//        String ketqua = (intent != null) ? intent.getStringExtra(MainActivity.chuoi) : "Intent khong tai";
+//        Toast.makeText(this, ketqua , Toast.LENGTH_SHORT).show();
+       //Nhan so
+        int ketqua = (intent != null) ? intent.getIntExtra(MainActivity.so,-1) : 0;
+        Toast.makeText(this, ketqua + "" , Toast.LENGTH_SHORT).show();
     }
 }
